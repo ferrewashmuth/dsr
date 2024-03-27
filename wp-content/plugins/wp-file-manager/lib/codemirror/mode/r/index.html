@@ -1,40 +1,31 @@
-<title>CodeMirror: R mode</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/doc/docs.css">
+<!doctype html>
 
-<link rel="stylesheet" href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/lib/codemirror.css">
-<script src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/lib/codemirror.js"></script>
-<script src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/mode/r/r.js"></script>
-<style>.CodeMirror { border-top: 1px solid silver; border-bottom: 1px solid silver; }
+<title>CodeMirror: R mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="r.js"></script>
+<style>
+      .CodeMirror { border-top: 1px solid silver; border-bottom: 1px solid silver; }
       .cm-s-default span.cm-semi { color: blue; font-weight: bold; }
       .cm-s-default span.cm-dollar { color: orange; font-weight: bold; }
       .cm-s-default span.cm-arrow { color: brown; }
-      .cm-s-default span.cm-arg-is { color: brown; }</style>
-
-
-<div id="nav">
-  <a href="http://codemirror.net/"><h1>CodeMirror</h1>
-<img id="logo" src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/doc/logo.png"></a>
+      .cm-s-default span.cm-arg-is { color: brown; }
+    </style>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
 
   <ul>
-    <li>
-<a href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/index.html">Home</a>
-    </li>
-<li>
-<a href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/doc/manual.html">Manual</a>
-    </li>
-<li>
-<a href="https://github.com/codemirror/codemirror">Code</a>
-  </li>
-</ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
   <ul>
-    <li>
-<a href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/mode/index.html">Language modes</a>
-    </li>
-<li>
-<a class="active" href="#">R</a>
-  </li>
-</ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">R</a>
+  </ul>
 </div>
 
 <article>
@@ -82,7 +73,9 @@ print("Showing powers of 3 --"); print(powerful(3));
 # returned. So you could equally just say:
 powerful <- function(x) {list(x2=x*x, x3=x*x*x, x4=x*x*x*x)}
 </textarea></form>
-    <script>var editor = CodeMirror.fromTextArea(document.getElementById("code"), {});</script>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {});
+    </script>
 
     <p><strong>MIME types defined:</strong> <code>text/x-rsrc</code>.</p>
 

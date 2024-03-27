@@ -1,41 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
 <title>CodeMirror: TiddlyWiki mode</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/doc/docs.css">
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
 
-<link rel="stylesheet" href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/lib/codemirror.css">
-<link rel="stylesheet" href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/mode/tiddlywiki/tiddlywiki.css">
-<script src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/lib/codemirror.js"></script>
-<script src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/addon/edit/matchbrackets.js"></script>
-<script src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/mode/tiddlywiki/tiddlywiki.js"></script>
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<link rel="stylesheet" href="tiddlywiki.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="../../addon/edit/matchbrackets.js"></script>
+<script src="tiddlywiki.js"></script>
 <style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
-
-
-<div id="nav">
-  <a href="http://codemirror.net/"><h1>CodeMirror</h1>
-<img id="logo" src="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/doc/logo.png"></a>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
 
   <ul>
-    <li>
-<a href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/index.html">Home</a>
-    </li>
-<li>
-<a href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/doc/manual.html">Manual</a>
-    </li>
-<li>
-<a href="https://github.com/codemirror/codemirror">Code</a>
-  </li>
-</ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
   <ul>
-    <li>
-<a href="https://puainquiry.labor.alabama.gov/wp-content/plugins/wp-file-manager/lib/codemirror/mode/index.html">Language modes</a>
-    </li>
-<li>
-<a class="active" href="#">TiddlyWiki</a>
-  </li>
-</ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">TiddlyWiki</a>
+  </ul>
 </div>
 
 <article>
@@ -141,28 +127,28 @@ cf. [[TiddlyWiki.com|http://www.tiddlywiki.com/#EmbeddedImages]]
 
 !Custom Styling
 * {{{@@CssProperty:value;CssProperty:value;...@@}}}<br>''N.B.:'' CSS color definitions should use lowercase letters to prevent the inadvertent creation of WikiWords.
-* <code>{{customCssClass{...}}}</code>
-* raw HTML can be inserted by enclosing the respective code in HTML tags: {{{ ... }}}
+* <html><code>{{customCssClass{...}}}</code></html>
+* raw HTML can be inserted by enclosing the respective code in HTML tags: {{{<html> ... </html>}}}
 
 !Special Markers
 * {{{<br>}}} forces a manual line break
 * {{{----}}} creates a horizontal ruler
 * [[HTML entities|http://www.tiddlywiki.com/#HtmlEntities]]
 * [[HTML entities local|HtmlEntities]]
-* {{{<<macroname>>}}} calls the respective [[macro|Macros]]
-* To hide text within a tiddler so that it is not displayed, it can be wrapped in {{{/%}}} and {{{%/}}}.<br>This can be a useful trick for hiding drafts or annotating complex markup.
+* {{{<<macroName>>}}} calls the respective [[macro|Macros]]
+* To hide text within a tiddler so that it is not displayed, it can be wrapped in {{{/%}}} and {{{%/}}}.<br/>This can be a useful trick for hiding drafts or annotating complex markup.
 * To prevent wiki markup from taking effect for a particular section, that section can be enclosed in three double quotes: e.g. {{{"""WikiWord"""}}}.
-</macroname></textarea></div>
+</textarea></div>
 
-    <script>var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         mode: 'tiddlywiki',      
         lineNumbers: true,
         matchBrackets: true
-      });</script>
+      });
+    </script>
 
     <p>TiddlyWiki mode supports a single configuration.</p>
 
     <p><strong>MIME types defined:</strong> <code>text/x-tiddlywiki</code>.</p>
   </article>
-
-</html>

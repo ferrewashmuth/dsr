@@ -1,5 +1,12 @@
-<br>
-<b>Fatal error</b>:  Uncaught Error: Class &quot;elFinderEditor&quot; not found in C:\xampp\htdocs\dsr\wp-content\plugins\wp-file-manager\lib\php\editors\ZipArchive\editor.php:3
-Stack trace:
-#0 {main}
-  thrown in <b>C:\xampp\htdocs\dsr\wp-content\plugins\wp-file-manager\lib\php\editors\ZipArchive\editor.php</b> on line <b>3</b><br>
+<?php
+
+class elFinderEditorZipArchive extends elFinderEditor
+{
+    public function enabled()
+    {
+        return (!defined('ELFINDER_DISABLE_ZIPEDITOR') || !ELFINDER_DISABLE_ZIPEDITOR) &&
+            class_exists('Barryvdh\elFinderFlysystemDriver\Driver') &&
+            class_exists('League\Flysystem\Filesystem') &&
+            class_exists('League\Flysystem\ZipArchive\ZipArchiveAdapter');
+    }
+}
